@@ -50,7 +50,7 @@ const typeDefs = gql`
     allUsers: [User!]!
     allTweets: [Tweet!]!
     tweet(id: ID!): Tweet
-    movie(id: string!): Movie
+    movie(id: String!): Movie
   }
   type Mutation {
     postTweet(text: String!, userId: ID!): Tweet!
@@ -101,7 +101,7 @@ const resolvers = {
         .then((json) => json.data.movies);
     },
     movie(_, { id }) {
-      return fetch(`https://yts.mx/api/v2/list_movies.json?movie_id=${id}`)
+      return fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
         .then((res) => res.json())
         .then((json) => json.data.movie);
     },
