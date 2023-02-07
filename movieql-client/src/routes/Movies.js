@@ -22,7 +22,7 @@ const Movies = () => {
       <Header>
         <Title>Apollo Movies</Title>
       </Header>
-      {loading && <Loading>Loading...</Loading>}
+      {loading && <Loading>Loading...🏃🏻🏃🏻‍♂️🏃🏻‍♀️</Loading>}
       {error && <Error>Could not fetch 🤨</Error>}
       <MoviesGrid>
         {data?.allMovies?.map((movie) => (
